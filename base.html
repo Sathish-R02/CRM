@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Simple CRM</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+  <header>
+    <h1>Simple Purchase & Sales CRM</h1>
+    <nav>
+      <a href="{{ url_for('index') }}">Dashboard</a> |
+      <a href="{{ url_for('products') }}">Products</a> |
+      <a href="{{ url_for('customers') }}">Customers</a> |
+      <a href="{{ url_for('suppliers') }}">Suppliers</a> |
+      <a href="{{ url_for('purchase') }}">Record Purchase</a> |
+      <a href="{{ url_for('sale') }}">Record Sale</a> |
+      <a href="{{ url_for('reports') }}">Reports</a>
+    </nav>
+    <hr>
+  </header>
+
+  <div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="messages">
+          {% for category, message in messages %}
+            <div class="flash {{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+  </div>
+
+  <footer>
+    <hr>
+    <small>Notes: minimal demo. Add auth/validation for production.</small>
+  </footer>
+</body>
+</html>
