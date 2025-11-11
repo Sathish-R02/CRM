@@ -1,0 +1,13 @@
+body { font-family: Arial, sans-serif; margin: 12px; }
+header h1 { margin: 0; }
+nav a { margin-right: 8px; }
+.container { margin-top: 12px; }
+table { border-collapse: collapse; width: 100%; margin-top: 8px; }
+table, th, td { border: 1px solid #ccc; padding: 6px; text-align: left; }
+form label { display: block; margin: 6px 0; }
+button { margin-top: 8px; padding: 6px 12px; }
+.cards { display: flex; gap: 12px; margin-bottom: 12px; }
+.card { padding: 12px; border: 1px solid #ddd; border-radius: 6px; min-width: 180px; background: #f9f9f9; }
+.flash { padding: 8px; margin-bottom: 8px; border-radius: 4px; }
+.flash.success { background: #e6ffed; border: 1px solid #b8f0c2; }
+.flash.danger, .flash.error { background: #ffe6e6; border: 1px solid #f0b8b8; }
